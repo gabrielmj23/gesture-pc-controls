@@ -16,6 +16,6 @@ def get_landmarks_list(img, format=False):
     formatted_list = []
     for hand in landmarks_list:
         for id, lm in enumerate(hand.landmark):
-            formatted_list.append((id, int(lm.x * img.shape[1]), int(lm.y * img.shape[0])))
+            formatted_list.append((int(lm.x * img.shape[1]), int(lm.y * img.shape[0])))
     return formatted_list
     
